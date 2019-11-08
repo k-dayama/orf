@@ -10,7 +10,7 @@ function change(i){
      });
 }
 var get_slide = function(){
-    $.getJSON('testlog',function(data){
+    $.getJSON('testlog.json',function(data){
         jsondata = data;
         show_slide();
     })
@@ -19,10 +19,10 @@ var get_slide = function(){
 function show_slide(){
     for(i=0;i<2;i++){
         if(i+1 == jsondata.id){
-            document.getElementById(i).style.display="block";
+            document.getElementById(i+1).style.display="block";
         }
         if(i+1 != jsondata.id){
-            document.getElementById(i).style.display="none";
+            document.getElementById(i+1).style.display="none";
         }
     }
 }
